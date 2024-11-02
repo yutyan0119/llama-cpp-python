@@ -1071,7 +1071,7 @@ class Llama:
 
         # accumulate batches and encode
         for text in inputs:
-            tokens = self.tokenize(text.encode("utf-8"))
+            tokens = self.tokenize(text.encode("utf-8"), True, True)
             if truncate:
                 tokens = tokens[:n_batch]
 
